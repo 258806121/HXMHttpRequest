@@ -1,0 +1,41 @@
+//
+//  PrefixHeader.pch
+//  Http
+//
+//  Created by 侯绪铭 on 2017/4/11.
+//  Copyright © 2017年 HXM. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "CommonUtils.h"
+#import "MBProgressHUD.h"
+#import "BaseVC.h"
+#import "HXMHttpRequest.h"
+#import "AppDelegate.h"
+#import "HomeVC.h"
+
+/*
+ *常用网络状态 -- 01
+ */
+#define k_http_request_key_status   @"code"
+#define k_http_request_key_data     @"data"
+#define k_http_request_key_message  @"message"
+
+#define k_http_request_success      @"0"
+#define k_http_request_failed       @"当前网络不可用, 请检查网络设置"
+#define k_http_request_format_error @"接口内部错误"
+
+#define STATUS [CommonUtils fuckNULL:responseObject[k_http_request_key_status]]
+
+#define DATA responseObject[k_http_request_key_data]
+
+#define MESSAGE responseObject[k_http_request_key_message]
+
+
+
+
+
+
+#endif /* PrefixHeader_pch */
